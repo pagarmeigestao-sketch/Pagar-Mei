@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  footer a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@layer components {
+  /* ── Chat bubbles ── */
+  .chat-bubble {
+    @apply max-w-[85%] px-3 pt-2 pb-5 rounded-2xl text-[0.9125rem] leading-snug relative shadow-sm;
+  }
+  .chat-bubble.assistant {
+    @apply bg-white self-start rounded-tl-sm text-heading ml-1.5;
+  }
+  .chat-bubble.assistant::before {
+    content: '';
+    @apply absolute top-0 -left-2 border-b-[18px] border-b-transparent border-r-[10px] border-r-white;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%);
+  }
+  .chat-bubble.user {
+    @apply bg-wa-bubble self-end rounded-tr-sm text-heading mr-1.5 pr-3.5;
+  }
+  .chat-bubble.user::after {
+    content: '';
+    @apply absolute top-0 -right-2 border-b-[18px] border-b-transparent border-l-[10px] border-l-wa-bubble;
+    clip-path: polygon(0 0, 100% 0%, 0% 100%);
+  }
+  .chat-time {
+    @apply absolute bottom-1 right-2 text-[0.64rem] text-black/40;
+  }
+
+  /* ── Monitoring chat messages ── */
+  .mon-msg {
+    @apply max-w-[88%] px-3 pt-2 pb-5 rounded-2xl text-sm leading-snug relative shadow-sm;
+  }
+  .mon-msg.assistant {
+    @apply bg-white self-start rounded-tl-sm text-heading ml-1;
+  }
+  .mon-msg.assistant::before {
+    content: '';
+    @apply absolute top-0 -left-2 border-b-[18px] border-b-transparent border-r-[10px] border-r-white;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%);
+  }
+  .mon-msg.user {
+    @apply bg-wa-bubble self-end rounded-tr-sm text-heading mr-1;
+  }
+  .mon-msg.user::after {
+    content: '';
+    @apply absolute top-0 -right-2 border-b-[18px] border-b-transparent border-l-[10px] border-l-wa-bubble;
+    clip-path: polygon(0 0, 100% 0%, 0% 100%);
+  }
+  .mon-msg.status {
+    @apply bg-white self-start rounded-tl-sm text-heading ml-1 border-l-4 border-primary;
+  }
+
+  /* ── File attachment ── */
+  .file-attachment {
+    @apply flex items-center gap-2 bg-black/5 px-2.5 py-2 rounded-lg mt-1.5 text-[0.85rem] font-medium;
+  }
+
+  /* ── Section tag pill ── */
+  .section-tag {
+    @apply inline-block bg-primary-subtle text-primary px-3.5 py-1 rounded-full text-[0.8125rem] font-bold tracking-wider uppercase mb-4;
+  }
+  .section-tag-light {
+    @apply inline-block bg-primary/10 text-primary-light px-3.5 py-1 rounded-full text-[0.8125rem] font-bold tracking-wider uppercase mb-4;
+  }
+}
+
+@layer utilities {
+  /* ── Phone float ── */
+  .phone-float {
+    animation: phone-float 5s ease-in-out infinite;
+  }
+
+  /* ── Typing dots ── */
+  .typing-dot {
+    animation: typing-dot 1.4s ease-in-out infinite both;
+  }
+  .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+  .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+  /* ── CTA pulse ── */
+  .cta-pulse {
+    animation: cta-pulse 2.5s ease-in-out infinite;
+  }
+
+  /* ── Dot pulse ── */
+  .dot-pulse {
+    animation: dot-pulse 2s infinite;
+  }
+}
+
+/* ── Keyframes ── */
+@keyframes phone-float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-11px); }
+}
+
+@keyframes typing-dot {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+  30%            { transform: translateY(-4px); opacity: 1; }
+}
+
+@keyframes cta-pulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+  50%       { box-shadow: 0 4px 20px rgba(0,0,0,0.15), 0 0 0 8px rgba(255,255,255,0.15); }
+}
+
+@keyframes dot-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(0, 174, 85, 0.4); }
+  70%  { box-shadow: 0 0 0 6px rgba(0, 174, 85, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 174, 85, 0); }
+}
+
+@keyframes scroll-mouse {
+  0%   { opacity: 1; transform: translateX(-50%) translateY(0); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(11px); }
+}
+
+/* ── Phone dotted background ── */
+.phone-bg {
+  background-color: #efeae2;
+  background-image:
+    radial-gradient(#d5cac3 1px, transparent 1px),
+    radial-gradient(#d5cac3 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+/* ── Chat snippet dotted bg ── */
+.chat-snippet-bg {
+  background-color: #efeae2;
+  background-image:
+    radial-gradient(#d5cac3 1px, transparent 1px),
+    radial-gradient(#d5cac3 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}

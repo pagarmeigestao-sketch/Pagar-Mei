@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PagarMEI | Resolva tudo do seu MEI pelo WhatsApp</title>
+    <meta name="description"
+        content="Pague DAS, emita notas fiscais, consulte pendências e mantenha seu CNPJ em dia com uma simples mensagem no WhatsApp.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="#" class="logo" style="text-decoration: none;">
+                <img src="logo.svg" alt="PagarMEI Logo" height="36" class="logo-img">
+            </a>
+            <a href="#comecar" class="btn btn-nav btn-sm">Criar conta</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero target-section" id="home">
+        <div class="hero-bg-circle hero-bg-circle--1"></div>
+        <div class="hero-bg-circle hero-bg-circle--2"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge">
+                    <span class="dot"></span> O assistente inteligente do microempreendedor
+                </div>
+                <h1>Resolva tudo do seu MEI pelo WhatsApp.</h1>
+                <p class="hero-desc">Pague DAS, emita notas fiscais, consulte pendências e mantenha seu CNPJ em dia com
+                    uma simples mensagem.</p>
+                <div class="hero-actions">
+                    <a href="#comecar" class="btn btn-hero-cta btn-lg">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M2.00018 11.9998C1.99611 9.94052 2.60742 7.93043 3.76672 6.20842C4.92601 4.4864 6.58495 3.12579 8.54719 2.28581C10.5094 1.44583 12.6953 1.15998 14.8553 1.45934C17.0153 1.75871 19.0634 2.63102 20.7711 3.97491C22.4789 5.3188 23.7788 7.08053 24.5243 9.06018C25.2697 11.0398 25.4297 13.1558 24.9852 15.1664C24.5408 17.1771 23.5103 18.9964 22.0223 20.4104C20.5342 21.8244 18.6506 22.7753 16.5922 23.1518C14.5338 23.5283 12.3862 23.3155 10.3952 22.5388L2.00018 24.9998L4.62518 17.1688C3.12656 15.3533 2.18349 13.1906 2.00018 10.9578" />
+                        </svg>
+                        Começar no WhatsApp
+                    </a>
+                    <a href="#como-funciona" class="btn btn-hero-outline btn-lg">Ver como funciona</a>
+                </div>
+                <div class="hero-social-proof">
+                    <div class="avatar-group">
+                        <img src="https://images.unsplash.com/photo-1610444583737-2936bce98553?auto=format&fit=crop&w=100&q=80"
+                            alt="" class="avatar">
+                        <img src="https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?auto=format&fit=crop&w=100&q=80"
+                            alt="" class="avatar">
+                        <img src="https://images.unsplash.com/photo-1621348161746-b29555ca292e?auto=format&fit=crop&w=100&q=80"
+                            alt="" class="avatar">
+                        <img src="https://images.unsplash.com/photo-1544333346-64e4fe1fdeb5?auto=format&fit=crop&w=100&q=80"
+                            alt="" class="avatar">
+                    </div>
+                    <div class="social-text">
+                        <strong>+1.000 MEIs</strong> já simplificaram a vida
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-header">
+                        <div style="display:flex;align-items:center;gap:12px;padding:0 4px;">
+                            <div
+                                style="width:32px;height:32px;background-color:rgba(255,255,255,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+                                <img src="logo.svg" alt="PagarMEI" style="width:24px;filter:brightness(0) invert(1);">
+                            </div>
+                            <div>
+                                <strong style="color:#fff;font-size:0.9rem;display:block;line-height:1.2;">PagarMEI
+                                    Assistente</strong>
+                                <span style="color:rgba(255,255,255,0.7);font-size:0.75rem;">Online agora</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-chat-area" id="hero-chat">
+                        <div class="chat-date">Hoje</div>
+                        <div class="chat-bubble user">
+                            preciso recalcular meu DAS
+                            <span class="chat-time">10:41</span>
+                        </div>
+                        <div class="chat-bubble assistant typing" id="chat-typing-1">
+                            <div class="dots"><span></span><span></span><span></span></div>
+                        </div>
+                        <div class="chat-bubble assistant hidden" id="chat-msg-1">
+                            Encontrei 2 pagamentos em atraso. Deseja gerar o boleto atualizado?
+                            <span class="chat-time">10:41</span>
+                        </div>
+                        <div class="chat-bubble user hidden" id="chat-msg-2">
+                            sim
+                            <span class="chat-time">10:42</span>
+                        </div>
+                        <div class="chat-bubble assistant typing hidden" id="chat-typing-2">
+                            <div class="dots"><span></span><span></span><span></span></div>
+                        </div>
+                        <div class="chat-bubble assistant hidden" id="chat-msg-3">
+                            Pronto. Aqui está seu DAS atualizado. 📄
+                            <div class="file-attachment">
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+                                </svg>
+                                <span>DAS_Atualizado.pdf</span>
+                            </div>
+                            <span class="chat-time">10:42</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <span>Deslize para ver mais</span>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item fade-up">
+                    <span class="stat-number" data-target="10000">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">MEIs atendidos</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item fade-up" style="transition-delay:0.1s">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Disponível no WhatsApp</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item fade-up" style="transition-delay:0.2s">
+                    <span class="stat-number">3min</span>
+                    <span class="stat-label">Para emitir uma nota fiscal</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How it works -->
+    <section class="how-it-works section-light target-section" id="como-funciona">
+        <div class="container text-center">
+            <div class="section-tag fade-up">Como funciona</div>
+            <h2 class="fade-up" style="transition-delay:0.1s">Simples como mandar uma mensagem.</h2>
+            <p class="subtitle fade-up" style="transition-delay:0.2s">Sem aplicativos complicados. Sem portais difíceis.
+                Basta mandar uma mensagem e a inteligência do PagarMEI cuida do resto.</p>
+            <div class="steps-grid">
+                <div class="step-card fade-up" style="transition-delay:0.1s">
+                    <div class="step-number-bg">1</div>
+                    <div class="step-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                    </div>
+                    <h3>Salve o número</h3>
+                    <p>Adicione o contato do PagarMEI no seu WhatsApp em segundos.</p>
+                </div>
+                <div class="step-card fade-up" style="transition-delay:0.2s">
+                    <div class="step-number-bg">2</div>
+                    <div class="step-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg>
+                    </div>
+                    <h3>Mande uma mensagem</h3>
+                    <p>Diga o que precisa: pagar guia, emitir nota ou consultar débitos.</p>
+                </div>
+                <div class="step-card fade-up" style="transition-delay:0.3s">
+                    <div class="step-number-bg">3</div>
+                    <div class="step-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <h3>Problema resolvido</h3>
+                    <p>Receba a resposta ou o documento pronto na tela do celular.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature: DAS -->
+    <section class="feature-section target-section">
+        <div class="container feature-container">
+            <div class="feature-visual fade-up">
+                <div class="chat-snippet" style="background-color: var(--wa-bg);">
+                    <div class="chat-bubble user">recalcular das<span class="chat-time">14:02</span></div>
+                    <div class="chat-bubble assistant">
+                        Encontrei pagamentos em atraso. Deseja gerar o boleto atualizado?
+                        <span class="chat-time">14:02</span>
+                    </div>
+                    <div class="chat-bubble user">sim</div>
+                    <div class="chat-bubble assistant">
+                        Seu novo DAS já está pronto.
+                        <div class="file-attachment">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+                            </svg>
+                            <span>boleto_novo.pdf</span>
+                        </div>
+                        <span class="chat-time">14:03</span>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-text fade-up" style="transition-delay:0.15s">
+                <div class="section-tag section-tag--left">Guia DAS</div>
+                <h2>Recalcule seu DAS em segundos.</h2>
+                <p>Esqueceu de pagar? Não se preocupe. Calcule juros e multas automaticamente e receba o boleto novo
+                    direto na tela do seu celular.</p>
+                <a href="#comecar" class="link-action">Gerar DAS agora <span class="link-arrow">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature: Invoice -->
+    <section class="feature-section section-accent target-section">
+        <div class="container feature-container reverse">
+            <div class="feature-visual fade-up" style="transition-delay:0.15s">
+                <div class="chat-snippet shadow-lg" style="background-color: var(--wa-bg);">
+                    <div class="chat-bubble user">emitir nota<span class="chat-time">09:15</span></div>
+                    <div class="chat-bubble assistant">Qual o valor do serviço?<span class="chat-time">09:15</span>
+                    </div>
+                    <div class="chat-bubble user">500 reais<span class="chat-time">09:16</span></div>
+                    <div class="chat-bubble assistant">
+                        Nota gerada com sucesso. Deseja enviar o PDF ao seu cliente?
+                        <span class="chat-time">09:16</span>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-text fade-up">
+                <div class="section-tag section-tag--left">Nota Fiscal</div>
+                <h2>Emita nota fiscal pelo WhatsApp.</h2>
+                <p>Preencha os dados em conversa natural e rápida. Esqueça os sistemas lentos da prefeitura. Gere e
+                    envie a nota direto para o seu cliente em instantes.</p>
+                <a href="#comecar" class="link-action">Criar minha primeira nota <span class="link-arrow">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature: Monitoring -->
+    <section class="monitoring-section target-section" id="monitoramento">
+        <div class="container monitoring-container">
+
+            <!-- Left: text + feature list -->
+            <div class="monitoring-text fade-up">
+                <div class="section-tag section-tag--left">Monitoramento</div>
+                <h2>Seu MEI sempre em dia.</h2>
+                <p>Durma tranquilo. O PagarMEI monitora seu CNPJ 24 horas por dia e te avisa direto no WhatsApp antes
+                    que qualquer pendência vire problema.</p>
+                <div class="monitoring-features">
+                    <div class="monitoring-feature-item">
+                        <div class="mfi-dot mfi-dot--amber"></div>
+                        <div class="mfi-body">
+                            <strong>Lembretes de vencimento</strong>
+                            <span>Aviso automático dias antes do seu DAS vencer — sem surpresas.</span>
+                        </div>
+                    </div>
+                    <div class="monitoring-feature-item">
+                        <div class="mfi-dot mfi-dot--red"></div>
+                        <div class="mfi-body">
+                            <strong>Alertas de pendência fiscal</strong>
+                            <span>Detectamos débitos e irregularidades no seu CNPJ em tempo real.</span>
+                        </div>
+                    </div>
+                    <div class="monitoring-feature-item">
+                        <div class="mfi-dot mfi-dot--green"></div>
+                        <div class="mfi-body">
+                            <strong>Status do CNPJ atualizado</strong>
+                            <span>Verificação diária na Receita Federal e no Simples Nacional.</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="#comecar" class="btn btn-primary btn-lg monitoring-cta">Ativar monitoramento grátis</a>
+            </div>
+
+            <!-- Right: phone with animated WhatsApp monitoring messages -->
+            <div class="monitoring-visual fade-up" style="transition-delay:0.2s">
+                <div class="monitoring-live-badge">
+                    <span class="live-dot"></span>
+                    Monitorando agora
+                </div>
+                <div class="monitoring-phone">
+                    <div class="phone-header">
+                        <div style="display:flex;align-items:center;gap:10px;padding:0 2px;">
+                            <div
+                                style="width:30px;height:30px;background:rgba(255,255,255,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+                                <img src="logo.svg" alt="PagarMEI" style="width:22px;filter:brightness(0) invert(1);">
+                            </div>
+                            <div>
+                                <strong
+                                    style="color:#fff;font-size:0.875rem;display:block;line-height:1.2;">PagarMEI</strong>
+                                <span style="color:rgba(255,255,255,0.7);font-size:0.7rem;">Online · monitora
+                                    24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="monitoring-chat-area" id="monitoring-chat">
+                        <div class="chat-date">Hoje</div>
+
+                        <!-- Message 1: DAS alert from PagarMEI -->
+                        <div class="mon-msg mon-msg--assistant mon-hidden" id="mon-msg-1">
+                            🔔 Atenção! Seu DAS de março vence em <strong>5 dias</strong>. Deseja gerar o boleto agora?
+                            <span class="chat-time">08:00</span>
+                        </div>
+
+                        <!-- Message 2: User replies -->
+                        <div class="mon-msg mon-msg--user mon-hidden" id="mon-msg-2">
+                            sim, gera o boleto
+                            <span class="chat-time">08:03</span>
+                        </div>
+
+                        <!-- Typing indicator -->
+                        <div class="mon-msg mon-msg--assistant typing mon-hidden" id="mon-typing-3">
+                            <div class="dots"><span></span><span></span><span></span></div>
+                        </div>
+
+                        <!-- Message 3: Boleto file -->
+                        <div class="mon-msg mon-msg--assistant mon-hidden" id="mon-msg-3">
+                            ✅ Boleto gerado!
+                            <div class="file-attachment">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+                                </svg>
+                                <span>DAS_Marco_2026.pdf</span>
+                            </div>
+                            <span class="chat-time">08:03</span>
+                        </div>
+
+                        <!-- Message 4: CNPJ status check -->
+                        <div class="mon-msg mon-msg--status mon-hidden" id="mon-msg-4">
+                            <div class="mon-status-row">
+                                <span class="mon-status-dot"></span>
+                                <span>CNPJ verificado — situação <strong>Regular</strong> ✓</span>
+                            </div>
+                            <span class="chat-time">09:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="monitoring-stat-pill">
+                    <strong>+10.000</strong>
+                    <span>MEIs protegidos</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="features-grid-section section-light target-section">
+        <div class="container">
+            <div class="section-tag text-center fade-up">Tudo em um só lugar</div>
+            <h2 class="text-center fade-up" style="transition-delay:0.1s">O que você pode fazer com o PagarMEI</h2>
+            <div class="grid-layout mt-4">
+                <div class="feature-card fade-up" style="transition-delay:0.05s">
+                    <div class="icon-wrapper"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg></div>
+                    <h4>Recalcular DAS</h4>
+                    <p>Atualize guias vencidas com cálculo automático de juros e multas.</p>
+                </div>
+                <div class="feature-card fade-up" style="transition-delay:0.10s">
+                    <div class="icon-wrapper"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                        </svg></div>
+                    <h4>Emitir nota fiscal</h4>
+                    <p>Gere notas de serviço de forma conversacional e rápida.</p>
+                </div>
+                <div class="feature-card fade-up" style="transition-delay:0.15s">
+                    <div class="icon-wrapper"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg></div>
+                    <h4>Monitoramento contínuo</h4>
+                    <p>Acompanhamento automático da situação do seu CNPJ.</p>
+                </div>
+                <div class="feature-card fade-up" style="transition-delay:0.20s">
+                    <div class="icon-wrapper"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                        </svg></div>
+                    <h4>Alertas de vencimento</h4>
+                    <p>Receba lembretes antes do vencimento do seu DAS mensal.</p>
+                </div>
+                <div class="feature-card fade-up" style="transition-delay:0.25s">
+                    <div class="icon-wrapper"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg></div>
+                    <h4>Consultar CNPJ</h4>
+                    <p>Verifique a situação cadastral e pendências com a Receita Federal.</p>
+                </div>
+                <div class="feature-card fade-up" style="transition-delay:0.30s">
+                    <div class="icon-wrapper"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg></div>
+                    <h4>Histórico de atendimentos</h4>
+                    <p>Acesse boletos, guias e notas já emitidas a qualquer hora.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience -->
+    <section class="target-audience target-section">
+        <div class="container audience-container">
+            <div class="audience-text fade-up">
+                <div class="badge" style="margin-bottom:16px;">
+                    <span class="dot"></span> Liberdade para empreender
+                </div>
+                <h2>Feito para quem vive correndo.</h2>
+                <p>O PagarMEI foi criado para prestadores de serviço, comerciantes e autônomos que querem focar no
+                    trabalho — não em formulários do governo.</p>
+                <div class="audience-pills">
+                    <span class="audience-pill">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                        Prestadores de Serviço
+                    </span>
+                    <span class="audience-pill">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                        Comerciantes
+                    </span>
+                    <span class="audience-pill">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                        Autônomos e Freelas
+                    </span>
+                </div>
+            </div>
+            <div class="audience-visual fade-up" style="transition-delay:0.2s">
+                <!-- WhatsApp-style MEI contact list — no external images -->
+                <div class="audience-wa-card">
+                    <div class="awa-header">
+                        <div class="awa-header-left">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M2.00018 11.9998C1.99611 9.94052 2.60742 7.93043 3.76672 6.20842C4.92601 4.4864 6.58495 3.12579 8.54719 2.28581C10.5094 1.44583 12.6953 1.15998 14.8553 1.45934C17.0153 1.75871 19.0634 2.63102 20.7711 3.97491C22.4789 5.3188 23.7788 7.08053 24.5243 9.06018C25.2697 11.0398 25.4297 13.1558 24.9852 15.1664C24.5408 17.1771 23.5103 18.9964 22.0223 20.4104C20.5342 21.8244 18.6506 22.7753 16.5922 23.1518C14.5338 23.5283 12.3862 23.3155 10.3952 22.5388L2.00018 24.9998L4.62518 17.1688C3.12656 15.3533 2.18349 13.1906 2.00018 10.9578" />
+                            </svg>
+                            <span>PagarMEI</span>
+                        </div>
+                        <div class="awa-header-right">
+                            <span class="awa-online-dot"></span>
+                            <span>Online</span>
+                        </div>
+                    </div>
+
+                    <div class="awa-contacts">
+
+                        <div class="awa-contact">
+                            <div class="awa-avatar awa-avatar--blue">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="1" y="3" width="15" height="13" rx="2" />
+                                    <path d="m16 8 5 3v6h-5V8z" />
+                                </svg>
+                            </div>
+                            <div class="awa-contact-info">
+                                <div class="awa-contact-row">
+                                    <strong>Entregador</strong>
+                                    <span class="awa-time">08:30</span>
+                                </div>
+                                <div class="awa-last-msg">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#53bdeb"
+                                        stroke-width="2.5">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                    DAS de fevereiro pago com sucesso
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="awa-contact">
+                            <div class="awa-avatar awa-avatar--pink">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                                </svg>
+                            </div>
+                            <div class="awa-contact-info">
+                                <div class="awa-contact-row">
+                                    <strong>Manicure</strong>
+                                    <span class="awa-time">09:15</span>
+                                </div>
+                                <div class="awa-last-msg">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#53bdeb"
+                                        stroke-width="2.5">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                    Nota fiscal emitida e enviada ✓
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="awa-contact">
+                            <div class="awa-avatar awa-avatar--orange">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                </svg>
+                            </div>
+                            <div class="awa-contact-info">
+                                <div class="awa-contact-row">
+                                    <strong>Eletricista</strong>
+                                    <span class="awa-time">10:02</span>
+                                </div>
+                                <div class="awa-last-msg">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#53bdeb"
+                                        stroke-width="2.5">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                    CNPJ regular — tudo em dia 🟢
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="awa-contact awa-contact--unread">
+                            <div class="awa-avatar awa-avatar--green">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                    <polyline points="9 22 9 12 15 12 15 22" />
+                                </svg>
+                            </div>
+                            <div class="awa-contact-info">
+                                <div class="awa-contact-row">
+                                    <strong>Comerciante</strong>
+                                    <span class="awa-time awa-time--unread">11:47</span>
+                                </div>
+                                <div class="awa-last-msg awa-last-msg--bold">
+                                    🔔 Seu DAS vence em 3 dias. Pagar?
+                                </div>
+                            </div>
+                            <div class="awa-unread-badge">1</div>
+                        </div>
+
+                    </div>
+
+                    <div class="awa-footer">
+                        <span>+10.000 MEIs atendidos</span>
+                        <span class="awa-footer-dot"></span>
+                        <span>24/7 no WhatsApp</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security -->
+    <section class="security-section target-section">
+        <div class="container text-center">
+            <div class="section-tag section-tag--light fade-up">Segurança</div>
+            <h2 class="fade-up" style="transition-delay:0.1s">Sua empresa em boas mãos.</h2>
+            <p class="subtitle fade-up" style="transition-delay:0.2s">Utilizamos a mesma tecnologia de proteção de dados
+                dos maiores bancos digitais, operando via API oficial do WhatsApp.</p>
+            <div class="trust-grid">
+                <div class="trust-card fade-up" style="transition-delay:0.1s">
+                    <div class="trust-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                    </div>
+                    <h4>Privacidade Total</h4>
+                    <p>Criptografia de ponta a ponta em todas as transações fiscais. Seus dados nunca são
+                        compartilhados.</p>
+                </div>
+                <div class="trust-card fade-up" style="transition-delay:0.2s">
+                    <div class="trust-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h4>Parceiro Oficial</h4>
+                    <p>Operamos via API Oficial do WhatsApp Business, garantindo total legitimidade do serviço.</p>
+                </div>
+                <div class="trust-card fade-up" style="transition-delay:0.3s">
+                    <div class="trust-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <h4>Conformidade LGPD</h4>
+                    <p>Tratamento de dados rigoroso conforme a Lei Geral de Proteção de Dados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta target-section" id="comecar">
+        <div class="final-cta-content text-center fade-up">
+            <div class="cta-badge">Gratuito para começar</div>
+            <h2>Pronto para simplificar seu MEI?</h2>
+            <p>Junte-se a mais de 10.000 empreendedores que pararam de perder tempo com burocracia.</p>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+                <a href="#" class="btn btn-cta-white btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M2.00018 11.9998C1.99611 9.94052 2.60742 7.93043 3.76672 6.20842C4.92601 4.4864 6.58495 3.12579 8.54719 2.28581C10.5094 1.44583 12.6953 1.15998 14.8553 1.45934C17.0153 1.75871 19.0634 2.63102 20.7711 3.97491C22.4789 5.3188 23.7788 7.08053 24.5243 9.06018C25.2697 11.0398 25.4297 13.1558 24.9852 15.1664C24.5408 17.1771 23.5103 18.9964 22.0223 20.4104C20.5342 21.8244 18.6506 22.7753 16.5922 23.1518C14.5338 23.5283 12.3862 23.3155 10.3952 22.5388L2.00018 24.9998L4.62518 17.1688C3.12656 15.3533 2.18349 13.1906 2.00018 10.9578" />
+                    </svg>
+                    Começar Agora Grátis
+                </a>
+                <span class="cta-note">Sem cartão de crédito. Cancele quando quiser.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.svg" alt="PagarMEI Logo" height="28">
+                </div>
+                <div class="footer-links">
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Privacidade</a>
+                    <a href="#">Contato</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 PagarMEI. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
