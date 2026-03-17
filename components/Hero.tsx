@@ -70,7 +70,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-[100px] sm:pt-[120px] pb-[60px] sm:pb-[80px] overflow-hidden bg-cta-gradient"
+      className="relative min-h-screen flex items-center pt-[140px] sm:pt-[160px] pb-[60px] sm:pb-[80px] overflow-hidden bg-cta-gradient"
     >
       {/* ── Background atmosphere ── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -149,7 +149,7 @@ export default function Hero() {
               href="https://wa.me/5511996740623?text=Oi%20Pagar%20MEI%2C%20quero%20come%C3%A7ar"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white font-bold rounded-full px-7 py-4 text-[1rem] transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98] text-[#007A63] shadow-lg hover:shadow-xl shadow-black/10"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white font-bold rounded-full px-7 py-4 text-[1rem] transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98] text-[#007A63]"
             >
               <WaIcon />
               Quero começar

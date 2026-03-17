@@ -328,7 +328,6 @@ export default function HowItWorks() {
               className="relative inline-flex items-center gap-3 text-white font-bold rounded-full px-9 py-[18px] text-[1.125rem] overflow-hidden group cursor-pointer"
               style={{
                 background: 'linear-gradient(135deg, #00AE55 0%, #007A63 100%)',
-                boxShadow: '0 8px 32px rgba(0,174,85,0.4), 0 2px 8px rgba(0,174,85,0.2)',
               }}
             >
               {/* Shimmer sweep on hover */}

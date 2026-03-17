@@ -34,8 +34,8 @@ export default function FinalCTA() {
             href="https://wa.me/5511996740623?text=Oi%20Pagar%20MEI%2C%20quero%20come%C3%A7ar"
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ y: -3, boxShadow: '0 8px 32px rgba(0,0,0,0.22)' }}
-            className="inline-flex items-center gap-2.5 bg-white text-primary font-bold rounded-full px-8 py-[15px] text-[1.0625rem] shadow-green-glow"
+            whileHover={{ y: -3 }}
+            className="inline-flex items-center gap-2.5 bg-white text-primary font-bold rounded-full px-8 py-[15px] text-[1.0625rem]"
           >
             <WaIcon />
             Quero começar agora grátis

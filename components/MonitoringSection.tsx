@@ -86,7 +86,7 @@ export default function MonitoringSection() {
 
           <a
             href="#comecar"
-            className="inline-flex items-center justify-center bg-primary text-white font-semibold rounded-full px-7 py-[15px] text-[1.0625rem] shadow-green-glow hover:bg-primary-hover hover:-translate-y-0.5 transition-all duration-200"
+            className="inline-flex items-center justify-center bg-primary text-white font-semibold rounded-full px-7 py-[15px] text-[1.0625rem] hover:bg-primary-hover hover:-translate-y-0.5 transition-all duration-200"
           >
             Ativar monitoramento
           </a>

@@ -32,7 +32,7 @@ export default function PhoneMockup({
         className="rounded-[46px] p-[1.5px]"
         style={{
           background: 'linear-gradient(160deg, #5A5A5C 0%, #3E3E40 40%, #2C2C2E 100%)',
-          boxShadow: '0 40px 100px rgba(0,0,0,0.4), 0 16px 40px rgba(0,0,0,0.25), inset 0 1.5px 0 rgba(255,255,255,0.15), inset 0 -1px 0 rgba(0,0,0,0.4)',
+          boxShadow: '0 20px 60px rgba(0,0,0,0.15), 0 8px 24px rgba(0,0,0,0.1), inset 0 1.5px 0 rgba(255,255,255,0.15), inset 0 -1px 0 rgba(0,0,0,0.4)',
         }}
       >
         {/* Dark gray body */}
