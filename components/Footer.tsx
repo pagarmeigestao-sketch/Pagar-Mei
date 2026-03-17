@@ -110,7 +110,7 @@ export default function Footer() {
           {/* Col 1: Brand */}
           <div>
             <Image
-              src="/logo.svg"
+              src="/logo-white.svg"
               alt="Pagar MEI"
               width={120}
               height={32}

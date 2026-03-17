@@ -28,12 +28,12 @@ export default function Navbar() {
       <div className="w-full max-w-[1200px] mx-auto px-6 flex justify-between items-center">
         <Link href="#" className="no-underline">
           <Image
-            src="/logo.svg"
+            src={scrolled ? "/logo.svg" : "/logo-white.svg"}
             alt="PagarMEI"
             width={140}
             height={36}
             priority
-            className=""
+            className="transition-all duration-300"
           />
         </Link>
 
